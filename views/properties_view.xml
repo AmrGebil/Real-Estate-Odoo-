@@ -63,7 +63,24 @@
 
         </record>
 
+      <record id="property_view_search" model="ir.ui.view">
+            <field name="name">Property search view</field>
+            <field name="model">property</field>
+             <field name="arch" type="xml">
+                 <search>
+                     <field name="name"/>
+                     <field name="postcode"  />
+                     <filter name="with_garden" string="with garden" domain="[('garden','=',True)]" />
+                     <filter name="without_garden" string="without garden" domain="[('garden','=',False)]" />
+                     <filter name="with_garage" string="with garage" domain="[('garage','=',True)]" />
+                     <filter name="without_garage" string="without garage" domain="[('garage','=',False)]" />
+                     <filter name="group_garden" string="Garden" context="{'group_by':'garden'}" />
+                     <filter name="group_garage" string="Garage" context="{'group_by':'garage'}" />
 
+                 </search>
+             </field>
+
+        </record>
 
 
         <record id="property_action" model="ir.actions.act_window">
