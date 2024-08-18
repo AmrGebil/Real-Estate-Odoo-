@@ -1,86 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-         <record id="property_view_tree" model="ir.ui.view">
-            <field name="name">Property tree view</field>
+         <!-- Tree View -->
+        <record id="property_view_tree" model="ir.ui.view">
+            <field name="name">property.tree.view</field>
             <field name="model">property</field>
-             <field name="arch" type="xml">
-                 <tree>
-                     <field name="name"/>
-                     <field name="postcode"  />
-                     <field name="date_availabilty"/>
-                     <field name="expect_price"/>
-                     <field name="bedroom"/>
-                     <field name="garage"/>
-                     <field name="garden"/>
-                     <field name="living_area" optional="1"/>
-                 </tree>
-             </field>
-
+            <field name="arch" type="xml">
+<!--                multi_edit="1" create="0" delete="0" edit="0">-->
+                <tree >
+                    <field name="name"/>
+                    <field name="postcode"/>
+                    <field name="date_availability"/>
+                    <field name="expected_price"/>
+                    <field name="bedroom"/>
+                    <field name="garage"/>
+                    <field name="garden"/>
+                    <field name="living_area" optional="1"/>
+                </tree>
+            </field>
         </record>
 
-
+        <!-- Form View -->
         <record id="property_view_form" model="ir.ui.view">
-            <field name="name">Property form view</field>
+            <field name="name">property.form.view</field>
             <field name="model">property</field>
-             <field name="arch" type="xml">
-                 <form>
-                     <sheet >
-
-                         <div class="'oe-title">
-                             <label for="name"/>
-                             <h1>
-                                 <field name="name"/>
-                             </h1>
-                         </div>
-                         <group>
-
-                         <group string="General info">
-                      <field name="postcode"  />
-                     <field name="date_availabilty"/>
-                     <field name="expect_price"/>
-                     <field name="selling_price"/>
-
-                         </group>
-                         <group string="Addtionsl info">
-                     <field name="bedroom"  />
-                     <field name="living_area"/>
-                     <field name="facades"/>
-                     <field name="garage"/>
-                     <field name="garden"/>
-                     <field name="garden_area"/>
-                     <field name="garden_oriantation"/>
-
-                         </group>
-                              <group string="Description">
-                                  <field name="description"/>
-
-                         </group>
-                         </group>
-                     </sheet>
-                 </form>
-             </field>
-
+            <field name="arch" type="xml">
+<!--                create="0" delete="0" edit="0"-->
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="General Info">
+                                <field name="postcode"/>
+                                <field name="date_availability"/>
+                                <field name="expected_price"/>
+                                <field name="selling_price"/>
+                            </group>
+                            <group string="Additional Info">
+                                <field name="bedroom"/>
+                                <field name="living_area"/>
+                                <field name="facades"/>
+                                <field name="garage"/>
+                                <field name="garden"/>
+                                <field name="garden_area"/>
+                                <field name="garden_orientation"/>
+                            </group>
+                            <group string="Description">
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
         </record>
 
-      <record id="property_view_search" model="ir.ui.view">
-            <field name="name">Property search view</field>
+        <!-- Search View -->
+        <record id="property_view_search" model="ir.ui.view">
+            <field name="name">property.search.view</field>
             <field name="model">property</field>
-             <field name="arch" type="xml">
-                 <search>
-                     <field name="name"/>
-                     <field name="postcode"  />
-                     <filter name="with_garden" string="with garden" domain="[('garden','=',True)]" />
-                     <filter name="without_garden" string="without garden" domain="[('garden','=',False)]" />
-                     <filter name="with_garage" string="with garage" domain="[('garage','=',True)]" />
-                     <filter name="without_garage" string="without garage" domain="[('garage','=',False)]" />
-                     <filter name="group_garden" string="Garden" context="{'group_by':'garden'}" />
-                     <filter name="group_garage" string="Garage" context="{'group_by':'garage'}" />
-
-                 </search>
-             </field>
-
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="postcode"/>
+                    <filter name="with_garden" string="With Garden" domain="[('garden', '=', True)]"/>
+                    <filter name="without_garden" string="Without Garden" domain="[('garden', '=', False)]"/>
+                    <filter name="with_garage" string="With Garage" domain="[('garage', '=', True)]"/>
+                    <filter name="without_garage" string="Without Garage" domain="[('garage', '=', False)]"/>
+                    <filter name="group_garden" string="Garden" context="{'group_by':'garden'}"/>
+                    <filter name="group_garage" string="Garage" context="{'group_by':'garage'}"/>
+                </search>
+            </field>
         </record>
+
 
 
         <record id="property_action" model="ir.actions.act_window">
@@ -91,7 +87,7 @@
 
 
         <menuitem id="property_menu_item"
-            name="properties_menu"
+            name="properties"
             parent="properties_menu"
             action="property_action"
         />
