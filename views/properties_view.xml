@@ -51,6 +51,7 @@
                                 <field name="garden"/>
                                 <field name="garden_area"/>
                                 <field name="garden_orientation"/>
+                                <field name="tag_ids" widget="many2many_tags"/>
                             </group>
                             <group string="Description">
                                 <field name="description"/>
@@ -82,7 +83,7 @@
 
 
         <record id="property_action" model="ir.actions.act_window">
-            <field name="name">Property action</field>
+            <field name="name">Properties</field>
             <field name="res_model">property</field>
 
         </record>
