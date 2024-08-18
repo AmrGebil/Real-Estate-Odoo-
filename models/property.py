@@ -23,6 +23,12 @@ class Property(models.Model):
         ('east', 'East'),
         ('west', 'West'),
     ], string="Garden Orientation")
+
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('pending', 'Pending'),
+        ('sold', 'Sold'),
+    ], default='draft')
     owner_id = fields.Many2one('owner', string='Owner')
     tag_ids = fields.Many2many('tag', string='Tags')
 
