@@ -34,6 +34,9 @@
                                <field name="phone"/>
                                 <field name="adress"/>
                             </group>
+                            <group >
+                               <field name="property_ids" widget="many2many_tags"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
@@ -43,7 +46,7 @@
 
 
         <record id="owner_action" model="ir.actions.act_window">
-            <field name="name">owner action</field>
+            <field name="name">owner </field>
             <field name="res_model">owner</field>
         </record>
 

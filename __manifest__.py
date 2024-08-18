@@ -25,7 +25,8 @@
         'security/ir.model.access.csv',
         'views/base_menu.xml',
         'views/properties_view.xml',
-       'views/owner.xml'
+       'views/owner.xml',
+       'views/tag.xml'
     ],
     'application':True
 

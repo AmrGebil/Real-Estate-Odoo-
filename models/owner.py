@@ -8,3 +8,4 @@ class Owner(models.Model):
     name = fields.Char(string="Owner Name", required=True, size=20)
     phone = fields.Char(string="Owner Phone")
     adress = fields.Char(string="Owner Adress")
+    property_ids = fields.One2many('property', 'owner_id', string="Properties")
