@@ -23,6 +23,7 @@ class Property(models.Model):
         ('east', 'East'),
         ('west', 'West'),
     ], string="Garden Orientation")
+    owner_id = fields.Many2one('owner', string='Owner')
 
     _sql_constraints = [
         ('name_unique', 'unique(name)', 'This name already exists')
