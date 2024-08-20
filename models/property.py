@@ -11,6 +11,7 @@ class Property(models.Model):
     date_availability = fields.Date(string="Date of Availability")
     expected_price = fields.Float(string="Expected Price", required=True)
     selling_price = fields.Float(string="Selling Price")
+    diff = fields.Integer(string="differance Price", compute='_compute_diff')
     bedroom = fields.Integer(string="Number of Bedrooms")
     living_area = fields.Integer(string="Living Area (sq m)")
     facades = fields.Integer(string="Number of Facades")
@@ -42,6 +43,35 @@ class Property(models.Model):
             if rec.bedroom < 0:
                 raise ValidationError("Please add a valid number of bedrooms")
 
+
+    def action_draft(self):
+        for rec in self:
+            rec.state = 'draft'
+            # rec.write({
+            #     'state':'draft'
+            # })
+
+    def action_pending(self):
+        for rec in self:
+            rec.state = 'pending'
+
+    def action_sold(self):
+        for rec in self:
+            rec.state = 'sold'
+
+    @api.depends('expected_price', 'selling_price', 'owner_id.phone')
+    def _compute_diff(self):
+        for rec in self:
+            rec.diff = rec.expected_price - rec.selling_price
+
+    @api.onchange('diff')
+    def warning(self):
+        for rec in self:
+            print("onchange test")
+            if rec.diff < 0:
+                return{
+                    'warning':{ 'title':'warning' , 'message':'he value of differance peice is negative','type':'notification '}
+                }
     # @api.model_create_multi
     # def create(self,vals):
     #     res = super(Property,self).create(vals)

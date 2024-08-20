@@ -20,14 +20,19 @@
     # 'currency': 'EUR',
     'license': 'LGPL-3',
     'summary': 'module to learn odoo',
-    'depends': ['base'],
+    'depends': ['base','sale_management'],
     'data': [
         'security/ir.model.access.csv',
         'views/base_menu.xml',
         'views/properties_view.xml',
+        'views/sale_order.xml',
        'views/owner.xml',
        'views/tag.xml'
     ],
+    'assets':{
+        'web.assets_backend':['Real-Estate-Odoo-\static\src\property.css']
+
+    },
     'application':True
 
 }

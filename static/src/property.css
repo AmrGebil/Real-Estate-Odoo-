@@ -1,0 +1,4 @@
+.header_custom table thead > tr > th {
+background-color: #714b67 !important;
+color: white !important;
+}
