@@ -47,6 +47,8 @@
                         <group>
                             <group string="General Info">
                                 <field name="owner_id"/>
+                                <field name="owner_phone"/>
+                                <field name="owner_adress"/>
                                 <field name="postcode"/>
                                 <field name="date_availability"/>
                                 <field name="expected_price"/>
@@ -68,6 +70,11 @@
                             </group>
                         </group>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>

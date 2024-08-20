@@ -4,15 +4,18 @@ from odoo.exceptions import ValidationError
 
 class Property(models.Model):
     _name = 'property'
+    _description = "Property"
+    _inherit = ['mail.thread','mail.activity.mixin']
+
 
     name = fields.Char(string="Property Name", required=True, size=10)
     description = fields.Text(string="Description")  # size attribute is not valid for Text field
     postcode = fields.Char(string="Postcode", required=True)
-    date_availability = fields.Date(string="Date of Availability")
-    expected_price = fields.Float(string="Expected Price", required=True)
-    selling_price = fields.Float(string="Selling Price")
+    date_availability = fields.Date(string="Date of Availability", tracking=1)
+    expected_price = fields.Float(string="Expected Price", required=True, tracking=1)
+    selling_price = fields.Float(string="Selling Price", tracking=1)
     diff = fields.Integer(string="differance Price", compute='_compute_diff')
-    bedroom = fields.Integer(string="Number of Bedrooms")
+    bedroom = fields.Integer(string="Number of Bedrooms", tracking=1)
     living_area = fields.Integer(string="Living Area (sq m)")
     facades = fields.Integer(string="Number of Facades")
     garage = fields.Boolean(string="Has Garage?")
@@ -31,6 +34,8 @@ class Property(models.Model):
         ('sold', 'Sold'),
     ], default='draft')
     owner_id = fields.Many2one('owner', string='Owner')
+    owner_phone = fields.Char(related="owner_id.phone" ,readonly=0)
+    owner_adress = fields.Char(related="owner_id.adress" ,readonly=0 )
     tag_ids = fields.Many2many('tag', string='Tags')
 
     _sql_constraints = [

@@ -20,7 +20,7 @@
     # 'currency': 'EUR',
     'license': 'LGPL-3',
     'summary': 'module to learn odoo',
-    'depends': ['base','sale_management'],
+    'depends': ['base','sale_management','mail'],
     'data': [
         'security/ir.model.access.csv',
         'views/base_menu.xml',
