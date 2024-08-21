@@ -37,6 +37,8 @@ class Property(models.Model):
     owner_phone = fields.Char(related="owner_id.phone" ,readonly=0)
     owner_adress = fields.Char(related="owner_id.adress" ,readonly=0 )
     tag_ids = fields.Many2many('tag', string='Tags')
+    lines_ids = fields.One2many('property.line', 'property_id' )
+
 
     _sql_constraints = [
         ('name_unique', 'unique(name)', 'This name already exists')
@@ -45,7 +47,7 @@ class Property(models.Model):
     @api.constrains('bedroom')
     def _check_bedrooms_greater_zero(self):
         for rec in self:
-            if rec.bedroom < 0:
+            if rec.bedroom <= 0:
                 raise ValidationError("Please add a valid number of bedrooms")
 
 
@@ -72,7 +74,6 @@ class Property(models.Model):
     @api.onchange('diff')
     def warning(self):
         for rec in self:
-            print("onchange test")
             if rec.diff < 0:
                 return{
                     'warning':{ 'title':'warning' , 'message':'he value of differance peice is negative','type':'notification '}
@@ -104,3 +105,10 @@ class Property(models.Model):
     #     # logic
     #     print("delete")
     #     return res
+
+class PropertyLine(models.Model):
+    _name = "property.line"
+
+    property_id = models.fields.Many2one('property')
+    area = fields.Integer(string="Area")
+    description = fields.Text(string="Description")
