@@ -32,6 +32,7 @@ class Property(models.Model):
         ('draft', 'Draft'),
         ('pending', 'Pending'),
         ('sold', 'Sold'),
+        ('colsed', 'Closed')
     ], default='draft')
     owner_id = fields.Many2one('owner', string='Owner')
     owner_phone = fields.Char(related="owner_id.phone" ,readonly=0)
@@ -65,6 +66,10 @@ class Property(models.Model):
     def action_sold(self):
         for rec in self:
             rec.state = 'sold'
+
+    def action_colsed(self):
+        for rec in self:
+            rec.state = 'colsed'
 
     @api.depends('expected_price', 'selling_price', 'owner_id.phone')
     def _compute_diff(self):
