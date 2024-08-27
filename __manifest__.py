@@ -25,6 +25,7 @@
         'security/ir.model.access.csv',
         'views/base_menu.xml',
         'views/properties_view.xml',
+        'views/building.xml',
         'views/sale_order.xml',
        'views/owner.xml',
        'views/tag.xml'
