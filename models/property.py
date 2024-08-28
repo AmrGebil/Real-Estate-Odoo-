@@ -12,6 +12,8 @@ class Property(models.Model):
     description = fields.Text(string="Description")  # size attribute is not valid for Text field
     postcode = fields.Char(string="Postcode", required=True)
     date_availability = fields.Date(string="Date of Availability", tracking=1)
+    expected_selling_date = fields.Date(string="Expected Selling Data", tracking=1)
+    is_late = fields.Boolean(default=False)
     expected_price = fields.Float(string="Expected Price", required=True, tracking=1)
     selling_price = fields.Float(string="Selling Price", tracking=1)
     diff = fields.Integer(string="differance Price", compute='_compute_diff')
@@ -83,6 +85,18 @@ class Property(models.Model):
                 return{
                     'warning':{ 'title':'warning' , 'message':'he value of differance peice is negative','type':'notification '}
                 }
+
+    def _expected_selling_date_check(self):
+        properties_ids=self.search([])
+        for rec in properties_ids:
+            if rec.state != 'sold':
+                if rec.expected_selling_date and rec.expected_selling_date < fields.date.today():
+                    rec.is_late = True
+
+
+
+
+
     # @api.model_create_multi
     # def create(self,vals):
     #     res = super(Property,self).create(vals)
