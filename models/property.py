@@ -7,7 +7,7 @@ class Property(models.Model):
     _description = "Property"
     _inherit = ['mail.thread','mail.activity.mixin']
 
-
+    ref = fields.Char(default='New', readonly=True)
     name = fields.Char(string="Property Name", required=True, size=10)
     description = fields.Text(string="Description")  # size attribute is not valid for Text field
     postcode = fields.Char(string="Postcode", required=True)
@@ -93,9 +93,39 @@ class Property(models.Model):
                 if rec.expected_selling_date and rec.expected_selling_date < fields.date.today():
                     rec.is_late = True
 
+    @api.model
+    def create(self, vals):
+        res = super(Property,self).create(vals)
+        if res.ref == 'New':
+            res.ref = self.env["ir.sequence"].next_by_code('property_sequence')
+        return res
 
 
+    def action(self):
+        #self.env.user
+        #self.env.uid
+        #self.env.company
+        #self.env.context)
+        #self.env.cr
+        #self.env['owner']
 
+       # self.env['owner'].create({
+       #      'name':"owner one",
+       #      "phone":'01151762358'
+       #  })
+
+       #self.env['owner'].search([])
+       #self.env['owner'].search([('id', '=', 1)]).unlink()
+
+       # self.env['owner'].search([('id', '=', 1)]).write({
+        #         'name': "Amr one",
+        #         'phone': '01151762358'
+        #     })
+
+        print(self.env['owner'].search([("id", "=", 1)]).write({
+        'name': "Amr Gebil",
+        'phone': '01151762358'
+    }))
 
     # @api.model_create_multi
     # def create(self,vals):

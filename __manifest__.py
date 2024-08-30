@@ -27,9 +27,10 @@
         'views/properties_view.xml',
         'views/building.xml',
         'views/sale_order.xml',
-       'views/owner.xml',
-       'reports/property_report.xml',
-    'views/tag.xml'
+        'views/owner.xml',
+        'reports/property_report.xml',
+        'views/tag.xml',
+        'data/sequence.xml'
     ],
     'assets':{
         'web.assets_backend':['Real-Estate-Odoo-\static\src\property.css']
