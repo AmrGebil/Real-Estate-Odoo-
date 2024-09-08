@@ -9,5 +9,6 @@ class Property(models.Model):
     property_id = fields.Many2one('property', string="Property")
     old_state = fields.Char(string="Old State")
     new_state = fields.Char(string="New State")
+    reason = fields.Char(string="Reason")
 
 

@@ -56,7 +56,7 @@ class Property(models.Model):
 
     def action_draft(self):
         for rec in self:
-            rec.change_state(rec.state, 'draft')
+            rec.change_state(rec.state, 'draft',)
             rec.state = 'draft'
             # rec.write({
             #     'state':'draft'
@@ -104,14 +104,20 @@ class Property(models.Model):
             res.ref = self.env["ir.sequence"].next_by_code('property_sequence')
         return res
 
-    def change_state(self, old_state, new_state):
+    def change_state(self, old_state, new_state, reason=""):
         for rec in self:
             rec.env['property.history'].create({
                      'user_id': rec.env.uid,
                      "property_id": rec.id ,
                      'old_state': old_state,
-                     "new_state": new_state
+                     "new_state": new_state,
+                     "reason": reason or ""
               })
+
+    def change_state_wizard(self):
+        wizard = self.env['ir.actions.actions']._for_xml_id('Real-Estate-Odoo-.change_state_action')
+        wizard['context'] = {'default_property_id': self.id}
+        return wizard
 
 
 

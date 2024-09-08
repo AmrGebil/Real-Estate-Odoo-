@@ -34,11 +34,12 @@
                         <header>
 <!--                            statusbar_visible="draft,pending"-->
 <!--                            options="{'clickable':1}"-->
-                            <button name="action" type="object" string="Action" class="btn-primary" />
+<!--                            <button name="action" type="object" string="Action" class="btn-primary" />-->
                             <button name="action_draft" type="object" string="Set To Draft" class="action_colsed" invisible="state == 'draft' or state == 'colsed' " />
                             <button name="action_pending" type="object" string="Set To Pending" class="btn-secondary" invisible="state != 'draft' or state == 'colsed'" />
                             <button name="action_sold" type="object" string="Set To Sold" class="btn-success" invisible="state != 'pending'" />
                              <button name="action_colsed" type="object" string="Closed" class="action_colsed" invisible="state != 'sold'" />
+                              <button name="change_state_wizard" type="object" string="Change State" class="btn-primary" invisible="state != 'colsed'" />
 
                             <field name="state" widget="statusbar" />
                         </header>
