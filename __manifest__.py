@@ -28,6 +28,7 @@
         'views/building.xml',
         'views/sale_order.xml',
         'views/owner.xml',
+        'views/properties_history_view.xml',
         'reports/property_report.xml',
         'views/tag.xml',
         'data/sequence.xml'

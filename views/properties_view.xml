@@ -35,9 +35,10 @@
 <!--                            statusbar_visible="draft,pending"-->
 <!--                            options="{'clickable':1}"-->
                             <button name="action" type="object" string="Action" class="btn-primary" />
-                            <button name="action_draft" type="object" string="Set To Draft" class="btn-primary" invisible="state == 'draft'" />
-                            <button name="action_pending" type="object" string="Set To Pending" class="btn-secondary" invisible="state != 'draft'" />
+                            <button name="action_draft" type="object" string="Set To Draft" class="action_colsed" invisible="state == 'draft' or state == 'colsed' " />
+                            <button name="action_pending" type="object" string="Set To Pending" class="btn-secondary" invisible="state != 'draft' or state == 'colsed'" />
                             <button name="action_sold" type="object" string="Set To Sold" class="btn-success" invisible="state != 'pending'" />
+                             <button name="action_colsed" type="object" string="Closed" class="action_colsed" invisible="state != 'sold'" />
 
                             <field name="state" widget="statusbar" />
                         </header>
@@ -48,31 +49,31 @@
                             </h1>
                             <label for="name"/>
                             <h3>
-                                <field name="name"/>
+                                <field name="name" readonly="state == 'colsed'"/>
                             </h3>
                         </div>
                         <group>
                             <group string="General Info">
-                                <field name="owner_id"/>
-                                <field name="owner_phone"/>
-                                <field name="owner_adress"/>
-                                <field name="postcode"/>
-                                <field name="date_availability"/>
-                                <field name="expected_selling_date"/>
-                                <field name="is_late" invisible="1"/>
-                                <field name="expected_price"/>
-                                <field name="selling_price"/>
-                                <field name="diff"/>
+                                <field name="owner_id" readonly="state == 'colsed'"/>
+                                <field name="owner_phone" readonly="state == 'colsed'"/>
+                                <field name="owner_adress" readonly="state == 'colsed'"/>
+                                <field name="postcode" readonly="state == 'colsed'"/>
+                                <field name="date_availability" readonly="state == 'colsed'"/>
+                                <field name="expected_selling_date" readonly="state == 'colsed'"/>
+                                <field name="is_late" invisible="1" readonly="state == 'colsed'"/>
+                                <field name="expected_price" readonly="state == 'colsed'"/>
+                                <field name="selling_price" readonly="state == 'colsed'"/>
+                                <field name="diff" readonly="state == 'colsed'"/>
                             </group>
                             <group string="Additional Info">
-                                <field name="bedroom"/>
-                                <field name="living_area"/>
-                                <field name="facades"/>
-                                <field name="garage"/>
-                                <field name="garden"/>
+                                <field name="bedroom" readonly="state == 'colsed'"/>
+                                <field name="living_area" readonly="state == 'colsed'"/>
+                                <field name="facades" readonly="state == 'colsed'"/>
+                                <field name="garage" readonly="state == 'colsed'"/>
+                                <field name="garden" readonly="state == 'colsed'"/>
                                 <field name="garden_area"/>
-                                <field name="garden_orientation"/>
-                                <field name="tag_ids" widget="many2many_tags"/>
+                                <field name="garden_orientation" readonly="state == 'colsed'"/>
+                                <field name="tag_ids" widget="many2many_tags" readonly="state == 'colsed'"/>
                             </group>
                           </group>
                             <group >
@@ -80,7 +81,7 @@
                             </group>
                          <notebook>
                         <page string="Bedrooms">
-                            <field name="lines_ids">
+                            <field name="lines_ids" readonly="state == 'colsed'">
                                 <tree editable="bottom">
                                     <field name="description"/>
                                     <field name="area"/>
@@ -145,7 +146,6 @@
             <field name="res_model">property</field>
 
         </record>
-
 
         <menuitem id="property_menu_item"
             name="properties"

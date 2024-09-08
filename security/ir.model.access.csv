@@ -4,3 +4,4 @@ access_owner,owner,model_owner,,1,1,1,1
 access_tag,tag,model_tag,,1,1,1,1
 access_property_lines,property_line,model_property_line,,1,1,1,1
 access_building,building,model_building,,1,1,1,1
+access_property_history,property_history,model_property_history,,1,1,1,1

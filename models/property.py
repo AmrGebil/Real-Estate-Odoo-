@@ -56,6 +56,7 @@ class Property(models.Model):
 
     def action_draft(self):
         for rec in self:
+            rec.change_state(rec.state, 'draft')
             rec.state = 'draft'
             # rec.write({
             #     'state':'draft'
@@ -63,14 +64,17 @@ class Property(models.Model):
 
     def action_pending(self):
         for rec in self:
+            rec.change_state(rec.state, 'pending')
             rec.state = 'pending'
 
     def action_sold(self):
         for rec in self:
+            rec.change_state(rec.state, 'sold')
             rec.state = 'sold'
 
     def action_colsed(self):
         for rec in self:
+            rec.change_state(rec.state, 'colsed')
             rec.state = 'colsed'
 
     @api.depends('expected_price', 'selling_price', 'owner_id.phone')
@@ -99,6 +103,20 @@ class Property(models.Model):
         if res.ref == 'New':
             res.ref = self.env["ir.sequence"].next_by_code('property_sequence')
         return res
+
+    def change_state(self, old_state, new_state):
+        for rec in self:
+            rec.env['property.history'].create({
+                     'user_id': rec.env.uid,
+                     "property_id": rec.id ,
+                     'old_state': old_state,
+                     "new_state": new_state
+              })
+
+
+
+
+
 
 
     def action(self):
