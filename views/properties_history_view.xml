@@ -31,6 +31,17 @@
                             <field name="new_state"/>
                             <field name="reason"/>
                             </group>
+                        <notebook>
+                        <page string="Bedrooms">
+                            <field name="line_ids" >
+                                <tree >
+                                    <field name="description"/>
+                                    <field name="area"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+
                     </sheet>
                 </form>
             </field>

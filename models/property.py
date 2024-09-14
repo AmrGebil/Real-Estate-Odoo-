@@ -111,7 +111,8 @@ class Property(models.Model):
                      "property_id": rec.id ,
                      'old_state': old_state,
                      "new_state": new_state,
-                     "reason": reason or ""
+                     "reason": reason or "",
+                     "line_ids": [(0, 0, {'description': line.description, 'area': line.area})for line in rec.lines_ids]
               })
 
     def change_state_wizard(self):
