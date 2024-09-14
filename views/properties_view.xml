@@ -10,7 +10,7 @@
                 <tree class="header_custom"  decoration-danger="(is_late)">
                     <field name="name"/>
                     <field name="owner_id"/>
-                    <field name="postcode"/>
+                    <field name="postcode" groups="Real_Estate_Odoo.Property_user"/>
                     <field name="date_availability"/>
                     <field name="expected_selling_date"/>
                     <field name="expected_price"/>

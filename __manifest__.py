@@ -22,6 +22,7 @@
     'summary': 'module to learn odoo',
     'depends': ['base','sale_management','mail'],
     'data': [
+      'security/groups.xml',
         'security/ir.model.access.csv',
         'views/base_menu.xml',
         'views/properties_view.xml',

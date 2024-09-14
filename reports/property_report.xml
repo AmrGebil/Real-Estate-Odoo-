@@ -6,7 +6,7 @@
         <field name="report_type">qweb-html</field>
         <field name="binding_model_id" ref="model_property"/>
         <field name="binding_type">report</field>
-        <field name="report_name">Real-Estate-Odoo-.property_report_template</field>
+        <field name="report_name">Real_Estate_Odoo.property_report_template</field>
 
     </record>
 
