@@ -41,6 +41,7 @@ class Property(models.Model):
     owner_adress = fields.Char(related="owner_id.adress" ,readonly=0 )
     tag_ids = fields.Many2many('tag', string='Tags')
     lines_ids = fields.One2many('property.line', 'property_id' )
+    active = fields.Boolean(default=True)
 
 
     _sql_constraints = [
@@ -116,7 +117,7 @@ class Property(models.Model):
               })
 
     def change_state_wizard(self):
-        wizard = self.env['ir.actions.actions']._for_xml_id('Real-Estate-Odoo-.change_state_action')
+        wizard = self.env['ir.actions.actions']._for_xml_id('Real_Estate_Odoo.change_state_action')
         wizard['context'] = {'default_property_id': self.id}
         return wizard
 
