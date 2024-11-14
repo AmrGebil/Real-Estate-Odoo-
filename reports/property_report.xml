@@ -40,7 +40,7 @@
                 }
             </style>
             <t t-foreach="docs" t-as="o">
-                <h1>Property(<span t-field="o.name"/>) </h1>
+                <h1 style="font-family:'Doto_Rounded-Black';">Property(<span t-field="o.name"/>) </h1>
                 <table>
                     <thead>
                         <tr>

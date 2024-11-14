@@ -36,7 +36,8 @@
         'data/sequence.xml'
     ],
     'assets':{
-        'web.assets_backend':['Real_Estate_Odoo\static\src\property.css']
+        'web.assets_backend': ['Real_Estate_Odoo\static\src\property.css'],
+        'web.report_assets_common': ['Real_Estate_Odoo\static\src\css\ font.css']
 
     },
     'application':True
