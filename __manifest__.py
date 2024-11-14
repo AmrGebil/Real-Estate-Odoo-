@@ -36,7 +36,7 @@
         'data/sequence.xml'
     ],
     'assets':{
-        'web.assets_backend':['Real-Estate-Odoo-\static\src\property.css']
+        'web.assets_backend':['Real_Estate_Odoo\static\src\property.css']
 
     },
     'application':True
