@@ -5,7 +5,7 @@ from odoo.http import request
 class PropertyApis(http.Controller):
 
     @http.route('/api/addproperty', methods=['POST'], type='http', auth='none', csrf=False)
-    def property(self):
+    def property_creation(self):
         # Ensure only POST requests handle property creation
         if request.httprequest.method != 'POST':
             return request.make_json_response(
@@ -44,5 +44,40 @@ class PropertyApis(http.Controller):
             return request.make_json_response(
                 {"error": f"An error occurred: {str(e)}"}, status=500
             )
+
+    @http.route('/api/addproperty/json', methods=['POST'], type='json', auth='none', csrf=False)
+    def property_json_creation(self):
+        # Ensure only POST requests handle property creation
+        if request.httprequest.method != 'POST':
+            return   {"error": "Only POST method is allowed for this endpoint."}
+
+
+        try:
+            # Decode request body
+            args = request.httprequest.data.decode('utf-8')
+            vals = json.loads(args)
+
+            # Validate input (add your field-specific validation here)
+            if not vals.get('name'):  # Example validation for 'name' field
+                return request.make_json_response(
+                    {"error": "Missing required field: 'name'."}, status=400
+                )
+
+            # Create property record
+            rec = request.env['property'].sudo().create(vals)
+
+            # Successful creation response
+            return {
+                    "message": f"Property created successfully with ID {rec.id}",
+                    "id": rec.id
+                }
+
+        except json.JSONDecodeError:
+            return  {"error": "Invalid JSON format."}
+
+        except Exception as e:
+            # General error handling
+            return {"error": f"An error occurred: {str(e)}"}
+
 
 
