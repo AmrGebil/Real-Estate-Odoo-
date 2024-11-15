@@ -8,7 +8,7 @@ class Property(models.Model):
     _inherit = ['mail.thread','mail.activity.mixin']
 
     ref = fields.Char(default='New', readonly=True)
-    name = fields.Char(string="Property Name", required=True, size=10)
+    name = fields.Char(string="Property Name", required=True, size=50)
     description = fields.Text(string="Description")  # size attribute is not valid for Text field
     postcode = fields.Char(string="Postcode", required=True)
     date_availability = fields.Date(string="Date of Availability", tracking=1)
