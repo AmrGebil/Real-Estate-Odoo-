@@ -1,0 +1,775 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* Real_Estate_Odoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-21 16:11+0000\n"
+"PO-Revision-Date: 2024-11-21 16:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_needaction
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__active
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__active
+msgid "Active"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__activity_ids
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__activity_exception_decoration
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__activity_state
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__activity_type_icon
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "Additional Info"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_search
+msgid "Archived"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history_line__area
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_line__area
+msgid "Area"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_report_template
+msgid "Area (m2)"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_attachment_count
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_history_view_form
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "Bedrooms"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.actions.act_window,name:Real_Estate_Odoo.building_action
+msgid "Building"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__code
+msgid "Building Code"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__name
+msgid "Building Name"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__number
+msgid "Building Number"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.ui.menu,name:Real_Estate_Odoo.building_menu_item
+msgid "Builds"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_change_state_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.actions.act_window,name:Real_Estate_Odoo.change_state_action
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_change_state_view_form
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "Change State"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.actions.server,name:Real_Estate_Odoo.property_closed_server_action
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__property__state__colsed
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "Closed"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.ui.menu,name:Real_Estate_Odoo.configurations_menu
+msgid "Configurations"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_change_state_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__create_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_change_state__create_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__create_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__create_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__create_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__create_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history_line__create_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_line__create_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_tag__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__create_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_change_state__create_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__create_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__create_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__create_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__create_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history_line__create_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_line__create_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_tag__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__date_availability
+msgid "Date of Availability"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__description
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__description
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history_line__description
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_line__description
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_report_template
+msgid "Description"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__display_name
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_change_state__display_name
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__display_name
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__display_name
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__display_name
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__display_name
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history_line__display_name
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_line__display_name
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_tag__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__change_state__state__draft
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__property__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__property__garden_orientation__east
+msgid "East"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__expected_price
+msgid "Expected Price"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__expected_selling_date
+msgid "Expected Selling Data"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_follower_ids
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_partner_ids
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__activity_type_icon
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:res.groups,comment:Real_Estate_Odoo.Property_manager
+msgid "Full Access"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_search
+msgid "Garage"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_search
+msgid "Garden"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__garden_area
+msgid "Garden Area (sq m)"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__garden_orientation
+msgid "Garden Orientation"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.building_view_form
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.owner_view_form
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_report_template
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "General Info"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__garage
+msgid "Has Garage?"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__garden
+msgid "Has Garden?"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__has_message
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__line_ids
+msgid "History Lines"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_change_state__id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history_line__id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_line__id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_tag__id
+msgid "ID"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__activity_exception_icon
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__activity_exception_icon
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__message_needaction
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__message_has_error
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__message_has_sms_error
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__message_has_error
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_is_follower
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__is_late
+msgid "Is Late"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__write_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_change_state__write_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__write_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__write_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__write_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__write_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history_line__write_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_line__write_uid
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_tag__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__write_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_change_state__write_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__write_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__write_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__write_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__write_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history_line__write_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_line__write_date
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_tag__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__lines_ids
+msgid "Lines"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__living_area
+msgid "Living Area (sq m)"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_has_error
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_ids
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__my_activity_date_deadline
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_report_template
+msgid "Name"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__new_state
+msgid "New State"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__activity_date_deadline
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__activity_summary
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__activity_type_id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__property__garden_orientation__north
+msgid "North"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:res.groups,comment:Real_Estate_Odoo.Property_user
+msgid "Not Full Access"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_needaction_counter
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__bedroom
+msgid "Number of Bedrooms"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__facades
+msgid "Number of Facades"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_has_error_counter
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__message_needaction_counter
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__message_has_error_counter
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__old_state
+msgid "Old State"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__owner_id
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "Owner"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__adress
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__adress
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__owner_adress
+msgid "Owner Adress"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__name
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__name
+msgid "Owner Name"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__phone
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__phone
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__owner_phone
+msgid "Owner Phone"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.ui.menu,name:Real_Estate_Odoo.owner_menu_item
+msgid "Owners"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__change_state__state__pending
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__property__state__pending
+msgid "Pending"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__postcode
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_report_template
+msgid "Postcode"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.actions.act_window,name:Real_Estate_Odoo.property_action
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_client__property_ids
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_owner__property_ids
+#: model:ir.ui.menu,name:Real_Estate_Odoo.properties_menu
+msgid "Properties"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.actions.act_window,name:Real_Estate_Odoo.property_history_action
+#: model:ir.ui.menu,name:Real_Estate_Odoo.property_history_menu_item
+msgid "Properties History"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_property
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_change_state__property_id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__property_id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_line__property_id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_sale_order__property
+msgid "Property"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_property_history
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history_line__property_history_id
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_history_view_form
+msgid "Property History"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_property_history_line
+msgid "Property History Lines"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:res.groups,name:Real_Estate_Odoo.Property_manager
+msgid "Property Manger"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__name
+msgid "Property Name"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.actions.report,name:Real_Estate_Odoo.property_report_action
+msgid "Property Report"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:res.groups,name:Real_Estate_Odoo.Property_user
+msgid "Property User"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_report_template
+msgid "Property("
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.actions.server,name:Real_Estate_Odoo.check_selling_date_cron_ir_actions_server
+msgid "Property: Check selling date"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.module.category,name:Real_Estate_Odoo.Property_category
+#: model:ir.ui.menu,name:Real_Estate_Odoo.real_estate_root_menu
+msgid "Real Estate"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_change_state__reason
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__reason
+msgid "Reason"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__ref
+msgid "Ref"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__activity_user_id
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__message_has_sms_error
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__selling_price
+msgid "Selling Price"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "Set To Draft"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "Set To Pending"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "Set To Sold"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__property__state__sold
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_form
+msgid "Sold"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__property__garden_orientation__south
+msgid "South"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_change_state__state
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__state
+msgid "State"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__activity_state
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.actions.act_window,name:Real_Estate_Odoo.tag_action
+msgid "Tag "
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_tag__name
+msgid "Tag Name"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__tag_ids
+#: model:ir.ui.menu,name:Real_Estate_Odoo.tag_menu_item
+msgid "Tags"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.constraint,message:Real_Estate_Odoo.constraint_property_name_unique
+msgid "This name already exists"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__activity_exception_decoration
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_search
+msgid "Unarchived"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property_history__user_id
+msgid "User"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_building__website_message_ids
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_building__website_message_ids
+#: model:ir.model.fields,help:Real_Estate_Odoo.field_property__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields.selection,name:Real_Estate_Odoo.selection__property__garden_orientation__west
+msgid "West"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_search
+msgid "With Garage"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_search
+msgid "With Garden"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_search
+msgid "Without Garage"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model_terms:ir.ui.view,arch_db:Real_Estate_Odoo.property_view_search
+msgid "Without Garden"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_building
+msgid "building"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_change_state
+msgid "change.state"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_client
+msgid "client"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model.fields,field_description:Real_Estate_Odoo.field_property__diff
+msgid "differance Price"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_owner
+msgid "owner"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.actions.act_window,name:Real_Estate_Odoo.owner_action
+msgid "owner "
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.ui.menu,name:Real_Estate_Odoo.property_menu_item
+msgid "properties"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_property_line
+msgid "property.line"
+msgstr ""
+
+#. module: Real_Estate_Odoo
+#: model:ir.model,name:Real_Estate_Odoo.model_tag
+msgid "tag"
+msgstr ""
