@@ -79,5 +79,35 @@ class PropertyApis(http.Controller):
             # General error handling
             return {"error": f"An error occurred: {str(e)}"}
 
+    @http.route('/api/updateproperty/<int:property_id>', methods=['POST'], type='http', auth='none', csrf=False)
+    def property_creation(self, property_id):
+        try:
+            property =request.env['property'].sudo().search([('id', '=', property_id)])
+            if not property:
+                return request.make_json_response(
+                    {"message": "Property doesn`t found"}, status=400
+                )
+
+            args = request.httprequest.data.decode('utf-8')
+            vals = json.loads(args)
+            property.write(vals)
+            return request.make_json_response(
+                {
+                    "message": "Property has been updated",
+                    "id": property.id,
+                    "name": property.name
+                }
+            )
+        except Exception as e:
+            return request.make_json_response(
+                {"error": f"An error occurred: {str(e)}"}, status=500
+            )
+
+
+
+
+
+
+
 
 
