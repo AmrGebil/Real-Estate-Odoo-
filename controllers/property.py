@@ -79,8 +79,8 @@ class PropertyApis(http.Controller):
             # General error handling
             return {"error": f"An error occurred: {str(e)}"}
 
-    @http.route('/api/updateproperty/<int:property_id>', methods=['POST'], type='http', auth='none', csrf=False)
-    def property_creation(self, property_id):
+    @http.route('/api/updateproperty/<int:property_id>', methods=['PUT'], type='http', auth='none', csrf=False)
+    def property_update(self, property_id):
         try:
             property =request.env['property'].sudo().search([('id', '=', property_id)])
             if not property:
@@ -103,7 +103,60 @@ class PropertyApis(http.Controller):
                 {"error": f"An error occurred: {str(e)}"}, status=500
             )
 
+    @http.route('/api/property/<int:property_id>', methods=['GET'], type='http', auth='none', csrf=False)
+    def retrun_one_property(self, property_id):
+        try:
+            property = request.env['property'].sudo().search([('id', '=', property_id)])
+            if not property:
+                return request.make_json_response(
+                    {"message": "Property doesn`t found"}, status=400
+                )
 
+            return request.make_json_response(
+                {
+                    "message": "Property has been updated",
+                    "id": property.id,
+                    "name": property.name,
+                    "postcode": property.postcode,
+                    "expected_price": property.expected_price,
+                    "selling_price": property.selling_price,
+                    "bedroom": property.bedroom,
+                    "garden_orientation": property.garden_orientation,
+                    "state": property.state,
+                },
+                status=200
+            )
+        except Exception as e:
+            return request.make_json_response(
+                {"error": f"An error occurred: {str(e)}"}, status=500
+            )
+
+    @http.route('/api/properties_list', methods=['GET'], type='http', auth='none', csrf=False)
+    def retrun_properties_list(self):
+        try:
+            properties = request.env['property'].sudo().search([])
+            if not property:
+                return request.make_json_response(
+                    {"message": "Property doesn`t found"}, status=400
+                )
+
+            return request.make_json_response(
+               [{ "message": "Property has been updated",
+                    "id": property.id,
+                    "name": property.name,
+                    "postcode": property.postcode,
+                    "expected_price": property.expected_price,
+                    "selling_price": property.selling_price,
+                    "bedroom": property.bedroom,
+                    "garden_orientation": property.garden_orientation,
+                    "state": property.state,
+                } for property in properties],
+                status=200
+            )
+        except Exception as e:
+            return request.make_json_response(
+                {"error": f"An error occurred: {str(e)}"}, status=500
+            )
 
 
 
