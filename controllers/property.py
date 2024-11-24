@@ -1,6 +1,7 @@
 import json
 from odoo import http
 from odoo.http import request
+from urllib.parse import parse_qs
 
 class PropertyApis(http.Controller):
 
@@ -114,7 +115,7 @@ class PropertyApis(http.Controller):
 
             return request.make_json_response(
                 {
-                    "message": "Property has been updated",
+                    "message": "Property list",
                     "id": property.id,
                     "name": property.name,
                     "postcode": property.postcode,
@@ -134,14 +135,18 @@ class PropertyApis(http.Controller):
     @http.route('/api/properties_list', methods=['GET'], type='http', auth='none', csrf=False)
     def retrun_properties_list(self):
         try:
-            properties = request.env['property'].sudo().search([])
+            parms = parse_qs(request.httprequest.query_string.decode('utf-8'))
+            domain = []
+            if parms.get('sate') :
+                domain += [('state', '=', parms.get('sate')[0])]
+            properties = request.env['property'].sudo().search(domain)
             if not property:
                 return request.make_json_response(
                     {"message": "Property doesn`t found"}, status=400
                 )
 
             return request.make_json_response(
-               [{ "message": "Property has been updated",
+               [{ "message": "Properties list",
                     "id": property.id,
                     "name": property.name,
                     "postcode": property.postcode,
